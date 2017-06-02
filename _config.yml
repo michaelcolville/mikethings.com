@@ -28,6 +28,9 @@ github_username:  jekyll
 markdown: kramdown
 gems:
 
+collections:
+-  portfolio
+
 exclude:
   - vendor
   - Readme.md

@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE HTML>
 <html lang="en-GB">
 <head>
@@ -8,7 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
-    
+
     <!-- jquery is useful even before the page is loaded, and is commonly cached
          Other JS resources should go below the content -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -16,30 +18,39 @@
 </head>
 <body>
 
+<div style="height: 30px"></div>
+
 <!-- Bio -->
 <div class="section">
   <div class="margins">
     <h1>mike things</h1>
-    <p>I'm mike, a London based iPhone developer making great apps for great people.</p>
+    <div style="height: 30px"></div>
+    <p>I'm Michael Leach, co founder of <a href="http://nordprojects.co" target="_blank">Nord Projects</a> - a London based design and tech studio. Formerly head of mobile development at <a href="http://www.simplestream.com/">Simplestream</a>, I have over 6 years industry exprerince in iPhone, Mac, and back end web development.</p>
+    <p>Contact - <a href="mailto:mike@nordprojects.co">mike@nordprojects.co</a></p>
   </div>
 </div> 
+
+<div style="height: 20px"></div>
 
 <!-- Apps -->
 <div class="section">
   <div class="margins">
+
+    <p>Some of my past work</p>
+    {% assign cards = site.portfolio | sort: 'order' %}
+    {% for card in cards %}
     <div class="row">
       <div class="col-sm-12">
-        <h2>At The Races</h2>
-        <img src="/images/atr.jpg" class="img-responsive img-rounded" style=""/>
+        <h3>{{card.title}}</h3>
+        <p>{{card.description}}</p>
+        <p>{{card.role}}</p>
+        <p>Launched {{card.launch}}</p>
+        <img src="{{card.image}}" class="img-responsive img-rounded" style=""/>
+        <div style="height: 30px"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>TVPlayer</h2>
-        <img src="/images/tvp.jpg" class="img-responsive img-rounded" style=""/>
-      </div>
-    </div>
-  </div>
+    {% endfor %}
+
 </div> 
 
 <!-- Footer -->
