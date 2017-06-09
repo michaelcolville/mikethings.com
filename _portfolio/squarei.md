@@ -1,5 +1,5 @@
 ---
-title: "Square [i]"
+title: "Square [ i ]"
 description: "(Now MacIP TV @ RoomNet TV) a solution for hotel in room entertainment"
 launch: Feb 2012
 image: /images/mac-iptv-roomnet.jpg

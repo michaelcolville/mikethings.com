@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
 
+    <link href="https://fonts.googleapis.com/css?family=NTR" rel="stylesheet">
     <!-- jquery is useful even before the page is loaded, and is commonly cached
          Other JS resources should go below the content -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -23,29 +24,48 @@
 <!-- Bio -->
 <div class="section">
   <div class="margins">
-    <h1>mike things</h1>
-    <div style="height: 30px"></div>
-    <p>I'm Michael Leach, co founder of <a href="http://nordprojects.co" target="_blank">Nord Projects</a> - a London based design and tech studio. Formerly head of mobile development at <a href="http://www.simplestream.com/">Simplestream</a>, I have over 6 years industry exprerince in iPhone, Mac, and back end web development.</p>
-    <p>Contact - <a href="mailto:mike@nordprojects.co">mike@nordprojects.co</a></p>
+    <div style="padding: 10px;">
+        <h1 style="font-family: 'NTR', sans-serif; font-size:5em">mike things</h1>
+
+        <div class="line"></div>
+
+        <div style="height: 30px"></div>
+        <p>I'm Michael Leach, co founder of <a href="http://nordprojects.co" target="_blank">Nord Projects</a> - a London based design and tech studio. Formerly head of mobile development at <a href="http://www.simplestream.com/" target="_blank">Simplestream</a>, I have over 6 years industry experience in iPhone, Mac and Web development.</p>
+        <p>Contact - <a href="mailto:mike@nordprojects.co">mike@nordprojects.co</a></p>
+    </div>
   </div>
 </div> 
 
 <div style="height: 20px"></div>
 
-<!-- Apps -->
+
+<!-- Protfolio -->
+
+<style>
+    .card {
+        border-width: 0.5px;
+        border-color: #8F8F8F;
+        background-color: #FAFAFA;
+        padding: 10px;
+        box-shadow: 0 2px 15px #BBBBBB;
+    }
+</style>
+
 <div class="section">
   <div class="margins">
 
-    <p>Some of my past work</p>
+    <p style="padding: 10px;">Some of my past work</p>
     {% assign cards = site.portfolio | sort: 'order' %}
     {% for card in cards %}
     <div class="row">
       <div class="col-sm-12">
-        <h3>{{card.title}}</h3>
-        <p>{{card.description}}</p>
-        <p>{{card.role}}</p>
-        <p>Launched {{card.launch}}</p>
-        <a href="{{card.link}}" target="_blank"><img src="{{card.image}}" class="img-responsive img-rounded" style=""/></a>
+        <div class="card img-rounded">
+            <h3 style="margin-top: 10px;">{{card.title}}</h3>
+            <p>{{card.description}}</p>
+            <p>{{card.role}}</p>
+            <p>Launched {{card.launch}}</p>
+            <a href="{{card.link}}" target="_blank"><img src="{{card.image}}" class="img-responsive img-rounded" style=""/></a>
+        </div>
         <div style="height: 30px"></div>
       </div>
     </div>
