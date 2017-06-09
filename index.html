@@ -57,8 +57,6 @@
     <p style="padding: 10px;">Some of my past work</p>
     {% assign cards = site.portfolio | sort: 'order' %}
     {% for card in cards %}
-    <div class="row">
-      <div class="col-sm-12">
         <div class="card img-rounded">
             <h3 style="margin-top: 10px;">{{card.title}}</h3>
             <p>{{card.description}}</p>
@@ -67,8 +65,6 @@
             <a href="{{card.link}}" target="_blank"><img src="{{card.image}}" class="img-responsive img-rounded" style=""/></a>
         </div>
         <div style="height: 30px"></div>
-      </div>
-    </div>
     {% endfor %}
 
 </div> 
