@@ -1,7 +1,7 @@
 ---
 title: "Blaze"
-description: "iPhone / iPad / Apple TV app, Digital channel platform for A+E Networks"
-role: Lead developer, Obj-C / Swift
+description: "iPhone / iPad / Apple TV app. Digital channel platform for A+E Networks"
+role: Lead Developer, Obj-C / Swift
 launch: November 2016
 image: /images/blaze.jpg
 order: 6

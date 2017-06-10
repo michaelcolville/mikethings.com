@@ -1,7 +1,7 @@
 ---
 title: "National Women's Soccer League"
-description: "iPhone app, Official NWSL app for Scores, Stats News and Live Games"
-role: Lead developer, Swift
+description: "iPhone app. Official NWSL app for scores, stats news and live games"
+role: Lead Developer, Swift
 launch: April 2017
 image: /images/nwsl.jpg
 order: 4

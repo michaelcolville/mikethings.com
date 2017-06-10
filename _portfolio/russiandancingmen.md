@@ -1,7 +1,7 @@
 ---
 title: "Russian Dancing Men"
-description: "iPhone Rythm Action Game, co developed with Weebls Stuff"
-role: Lead gameplay programmer in a team of 4
+description: "iPhone Rythm Action Game. Co-developed with Weebls Stuff"
+role: Lead Gameplay Programmer in a team of 4
 launch: October 2011
 image: /images/rdm.jpg
 order: 8
