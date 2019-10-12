@@ -30,7 +30,7 @@
         <div class="line"></div>
 
         <div style="height: 30px"></div>
-        <p>I'm Michael Colville (né Leach), Software Developer and co-founder of <a href="http://nordprojects.co" target="_blank">Nord Projects</a> - a London-based design and tech studio. Formerly Head of Mobile Development at <a href="http://www.simplestream.com/" target="_blank">Simplestream</a>, I have over 6 years' industry experience in iPhone, Mac and Web development.</p>
+        <p>Michael Colville is a Software Developer and Co-Founder of <a href="http://nordprojects.co" target="_blank">Nord Projects</a> - a London based design and technology studio. He was previously Head of Mobile Development at <a href="http://www.simplestream.com/" target="_blank">Simplestream</a>, and has over 8 years industry experience in iPhone, Android, Mac and Web development.</p>
         <p>Contact - <a href="mailto:mike@nordprojects.co">mike@nordprojects.co</a></p>
     </div>
   </div>
@@ -46,8 +46,16 @@
         border-width: 0.5px;
         border-color: #8F8F8F;
         background-color: #FAFAFA;
+        padding: 0px;
+        box-shadow: 0px 0px 30px -4px #BBBBBB;
+        position: relative;
+        min-height: 489px;
+    }
+    .copy {
+        position: absolute;
+        left: 0px; right: 0px; bottom: 0;
+        background: rgba(255,255,255, 0.8);
         padding: 10px;
-        box-shadow: 0 2px 15px #BBBBBB;
     }
 </style>
 
@@ -57,12 +65,14 @@
     <p style="padding: 10px;">Some of my past work</p>
     {% assign cards = site.portfolio | sort: 'order' %}
     {% for card in cards %}
-        <div class="card img-rounded">
-            <h3 style="margin-top: 10px;">{{card.title}}</h3>
-            <p>{{card.description}}</p>
-            <p>{{card.role}}</p>
-            <p>Launched {{card.launch}}</p>
-            <a href="{{card.link}}" target="_blank"><img src="{{card.image}}" class="img-responsive img-rounded" style=""/></a>
+        <div class="card">
+            <a href="{{card.link}}" target="_blank"><img src="{{card.image}}" class="img-responsive" style=""/></a>
+            <div class="copy">
+                <h3 style="margin-top: 10px;">{{card.title}}</h3>
+                <p>{{card.description}}</p>
+                <p>{{card.role}}</p>
+                <p>Launched {{card.launch}}</p>
+            </div>
         </div>
         <div style="height: 30px"></div>
     {% endfor %}

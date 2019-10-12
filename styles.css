@@ -1,5 +1,8 @@
 .margins {
-  max-width: 550px;
+  max-width: 850px;
   padding: 0 25px;
   margin: 0 auto;
+}
+p {
+  font-size: 18px;
 }
